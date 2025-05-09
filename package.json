@@ -1,0 +1,27 @@
+{
+  "name": "frontend-202501-51v-sesion01",
+  "version": "1.0.0",
+  "main": "01-es5-strict-mode.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frontend-202501-51V/frontend-202501-51V-sesion01.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/frontend-202501-51V/frontend-202501-51V-sesion01/issues"
+  },
+  "homepage": "https://github.com/frontend-202501-51V/frontend-202501-51V-sesion01#readme",
+  "description": "",
+  "devDependencies": {
+    "@babel/preset-env": "^7.27.2",
+    "@types/jest": "^29.5.14",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0"
+  }
+}
