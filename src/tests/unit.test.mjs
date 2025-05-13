@@ -1,20 +1,18 @@
-describe('Nivel 300: Cálculo de Propiedades Derivadas', () => {
-  it('Debe calcular correctamente el área del rectángulo', () => {
-    const rectangulo = { _ancho: 5, _alto: 10, get area() { return this._ancho * this._alto; } };
-    expect(rectangulo.area).toBe(50);
-  });
+// describe - nombre de la prueba unitaria
+// it nombre del caso unitario
+// expect (esperar) toBe(que sea) -> valor
 
-  it('Debe asignar correctamente las dimensiones válidas', () => {
-    const rectangulo = { _ancho: 0, _alto: 0, set dimensiones({ ancho, alto }) { if (ancho > 0 && alto > 0) { this._ancho = ancho; this._alto = alto; } } };
-    rectangulo.dimensiones = { ancho: 5, alto: 10 };
-    expect(rectangulo._ancho).toBe(5);
-    expect(rectangulo._alto).toBe(10);
-  });
+function sumarDosNumeros(num1, num2){
+  return num1 + num2;
+}
 
-  it('Debe mostrar un error al intentar asignar dimensiones inválidas', () => {
-    const rectangulo = { _ancho: 0, _alto: 0, set dimensiones({ ancho, alto }) { if (ancho > 0 && alto > 0) { this._ancho = ancho; this._alto = alto; } else console.error('Las dimensiones deben ser mayores a 0'); } };
-    console.error = jest.fn();
-    rectangulo.dimensiones = { ancho: -3, alto: 10 };
-    expect(console.error).toHaveBeenCalledWith('Las dimensiones deben ser mayores a 0');
-  });
-});
+describe("valida la funcion sumarDosNumeros", () => {
+  it('debe sumar dos numeros', () => {
+    expect(sumarDosNumeros(2,4)).toBe(6)
+    expect(sumarDosNumeros(3,6)).not.toBe(20) // correcto
+    expect(sumarDosNumeros(3,6)).not.toBeFalsy()
+    expect(sumarDosNumeros(123456, 12315)).toBe(135771)
+    expect(sumarDosNumeros(6, 3)).toBe(9)
+    expect(sumarDosNumeros(23, 10)).toBe(33)
+  })
+})
